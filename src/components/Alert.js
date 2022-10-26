@@ -1,31 +1,22 @@
 import React from 'react'
-import styles from "./Alert.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Alert = ({ handleOK, handleCancel, alertVis }) => {
+const Alert = ({ alertVis, handleOK, handleCancel }) => {
     return (
         <>
-            <div className="modal" style={{ display: alertVis ? "block" : "none" }}>
-                <div className={styles.darkBG} onClick={handleCancel} />
-                <div className={styles.centered}>
-                    <div className={styles.modal}>
-                        <div className={styles.modalHeader}>
-                            <h5 className={styles.heading}>Dialog</h5>
+            <div class="modal" tabindex="-1" style={{ display: alertVis ? "block" : "none" }} onBlur={handleCancel}>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bold">
+                            <h5 class="modal-title fs-3 fw-bold ">Are You Sure?</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={handleCancel} />
                         </div>
-                        <div className={styles.modalContent}>
-                            Are you sure you want to delete this?
+                        <div class="modal-body">
+                            <p>Do you want to delete this task?</p>
                         </div>
-                        <div className={styles.modalActions}>
-                            <div className={styles.actionsContainer}>
-                                <button className={styles.deleteBtn} onClick={handleOK}>
-                                    Delete
-                                </button>
-                                <button
-                                    className={styles.cancelBtn}
-                                    onClick={handleCancel}
-                                >
-                                    Cancel
-                                </button>
-                            </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick={handleCancel}>No</button>
+                            <button type="button" class="btn btn-primary" onClick={handleOK}>Yaa, Ofcourse</button>
                         </div>
                     </div>
                 </div>
