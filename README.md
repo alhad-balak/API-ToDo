@@ -27,7 +27,7 @@ A simple todo application built using [create-react-app](https://reactjs.org/doc
 - [HTML] -  Structuring web pages.
 - [CSS]-  Designing the website
 - [ReactJs] - HTML enhanced for web apps!
-- [markdown-it] - Markdown parser done right. Fast and easy to extend.
+- [Markdown-it] - Markdown parser done right. Fast and easy to extend.
 
 
 ## Installation and Setup   
